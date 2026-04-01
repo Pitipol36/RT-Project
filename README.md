@@ -2,7 +2,7 @@
 I'll made a blackhole!
 
 ### New Class: Ring(Object)
-- Used to make the accretion disk and the plant's ring
+- Used to make the accretion disk and the planet's ring
     - vCenter = ring's center (vector)
     - vNormal = ring's angle to indicate tilt (vector)
     - fRadiusInner = inner radius (float) (0 makes a disk)

@@ -12,9 +12,9 @@ import multiprocessing
 def renderBH():
     main_camera = rtc.Camera()
     main_camera.aspect_ratio = 16.0/9.0
-    main_camera.img_width = 3840
+    main_camera.img_width = 480
     main_camera.center = rtu.Vec3(0,0,0)
-    main_camera.samples_per_pixel = 1024
+    main_camera.samples_per_pixel = 20
     main_camera.max_depth = 5
     main_camera.vertical_fov = 60
     main_camera.look_from = rtu.Vec3(0, 0, -1)
@@ -60,7 +60,7 @@ def renderBH():
         
     world = rts.Scene()
     world.add_object(black_hole_disk)
-    world.add_object(black_hole_eh)
+    #world.add_object(black_hole_eh)
     world.add_object(rto.Sphere(rtu.Vec3(   2,   -1, 1.5),  0.8, mat_earth))
     world.add_object(rto.Sphere(rtu.Vec3(   5,   3, 6),  0.2, mat_phong1))
     world.add_object(rto.Sphere(rtu.Vec3(   -3,   -3, 6),  0.1, mat_phong2))
@@ -92,7 +92,7 @@ def renderBH():
 
     renderer = rtren.Renderer(main_camera, intg, world)
     renderer.render()
-    renderer.write_img2png('bh01.png')    
+    renderer.write_img2png('bhwithoutlambertianball.png')    
 
 if __name__ == "__main__":
     multiprocessing.freeze_support()

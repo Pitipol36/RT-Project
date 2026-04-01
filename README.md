@@ -7,7 +7,7 @@ I'll made a blackhole!
     - vNormal = ring's angle to indicate tilt (vector)
     - fRadiusInner = inner radius (float) (0 makes a disk)
     - fRadiusOuter = outer radius (float)
-- Beware: ring's actual size is from fRadiusOuter - fRadiusInner. Therefore it doesn't work when fRadiusInner is bigger than fRadiusOuter
+- Beware: Ring's actual size is from fRadiusOuter - fRadiusInner. Therefore it doesn't work when fRadiusInner is bigger than fRadiusOuter
 ### Black Hole
 - Only faked though since the engine cast rays in a straight line
 - Implemented in the integrator
